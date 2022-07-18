@@ -3,9 +3,7 @@
   display: flex;
   background-color: #4056A1;
   height: 120px;
-
   justify-content:space-between;
-
 
 }
 
@@ -16,6 +14,31 @@
 
 .navbar > div {
   margin-top: 2em;
-  margin-right: 1em;
+  margin-right: 1em; 
+}
+
+.arrows {
+  display: flex;
+  justify-content: center;
+  color: red
+}
+
+.profile {
+
+  background-color: #8a005e;
+  background-image: url("../images/profile_background.png");
+  opacity: 1;
+
+
+  font-family:'Source Sans Pro', sans-serif;
+  background-color: #CA9C67;
+  height: 400px;
+
+}
+
+
+.profile > div {
+  display: flex;
+  justify-content: center;
 
 }
