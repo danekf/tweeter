@@ -1,0 +1,41 @@
+.container{ 
+  margin-left: 5vw;
+  margin-right: 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+}
+
+
+#tweet-text{
+  resize: none;
+  width: 90vw;
+  height: 1.5em;
+  border: 0;
+  border-bottom: rgb(105, 105, 105);
+  border-bottom-style: groove;
+  outline: none;
+  
+}
+
+.submission{
+  display: flex;
+  justify-content:space-between; 
+  
+}
+
+.submit {
+  font-family: 'Bungee';
+  background-color: #4056A1; 
+  color: whitesmoke;
+  border: 0;
+}
+
+.counter {
+  font-family: 'Bungee'; 
+}
+
+.negative {
+  font-family: 'Bungee'; 
+  color: rgb(207, 0, 0);
+}

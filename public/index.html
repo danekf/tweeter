@@ -19,13 +19,17 @@
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
- 
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+    <!-- jQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
@@ -57,10 +61,30 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <h1>I am header 1.</h1>
-      <p>Big paragraph energy.</p>
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form method="POST" action="/tweets" >
+          <!--<label for="tweet-text">What are you humming about?</label> -->
+          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+          
+          <div class = submission>
+            <button type="submit" class = "submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+
+
 
     </main>
 
+    
+    
   </body>
+
+  <footer>
+  <!-- Choose colour for profile background, WIP -->
+  <input type = "color">
+
+</footer>
 </html>
