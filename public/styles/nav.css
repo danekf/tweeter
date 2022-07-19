@@ -5,6 +5,10 @@
   height: 120px;
   justify-content:space-between;
 
+  /*fix navbar to top*/
+  position:fixed ;
+  width: 100%;    
+
 }
 
 .navbar > span {
@@ -24,15 +28,14 @@
 }
 
 .profile {
-
-  background-color: #8a005e;
+  padding-top: 140px;
   background-image: url("../images/profile_background.png");
   opacity: 1;
 
 
   font-family:'Source Sans Pro', sans-serif;
   background-color: #CA9C67;
-  height: 400px;
+  height: 540px;
 
 }
 .profile > div {

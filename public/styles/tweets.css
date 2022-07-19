@@ -1,12 +1,14 @@
+/*Tweet Composition Stylings */
 .container{ 
+
   margin-left: 5vw;
   margin-right: 5vw;
+  margin-top: 5px;
+  margin-bottom: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;  
 }
-
-
 #tweet-text{
   resize: none;
   width: 90vw;
@@ -14,14 +16,12 @@
   border: 0;
   border-bottom: rgb(105, 105, 105);
   border-bottom-style: groove;
-  outline: none;
-  
+  outline: none;  
 }
 
 .submission{
   display: flex;
-  justify-content:space-between; 
-  
+  justify-content:space-between;   
 }
 
 .submit {
@@ -37,5 +37,75 @@
 
 .negative {
   font-family: 'Bungee'; 
-  color: rgb(207, 0, 0);
+  color: rgb(255, 0, 0);
 }
+
+/*Posted Tweets Stylings*/
+article {
+  margin-top: 1em;
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+  
+  border: 0;
+  border: rgb(105, 105, 105);
+  border-style: groove;
+  
+}
+
+article > header {
+  padding-top: 10px;
+  padding-bottom: 15px;
+  
+  
+}
+
+header > ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  padding-top: 5px;
+  padding-right: 10px;
+  margin: 0;
+
+  justify-content: space-between;
+}
+
+
+article > div{
+  padding-bottom: 15px;
+  border: 0;
+  border-bottom: rgb(105, 105, 105);
+  border-bottom-style: groove;
+}
+
+article:hover{
+  box-shadow: 5px 5px rgb(105, 105, 105);
+}
+
+article > footer{
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size:smaller;
+
+}
+
+footer > ul {
+
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  padding-right: 10px;
+  margin: 0;
+
+  justify-content: end;
+}
+
+.icons{
+  color:#4056A1;
+}
+.icons:hover{
+  color: yellow;
+}
+
