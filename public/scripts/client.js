@@ -5,7 +5,7 @@
 
 
 $(document).ready(() => {
-  
+
   //escape function for special characters
   const escape = function (string) {
     let div = document.createElement("div");
@@ -15,9 +15,7 @@ $(document).ready(() => {
   
   //formats tweet from data
   const $createTweetElement = (tweetData) =>{
-
     let text = tweetData.content.text;
-
     let handle = tweetData.user.handle;
    
     //open article
@@ -116,7 +114,11 @@ $(document).ready(() => {
       //load all current tweets at time of page load
     loadTweets();
 
-  
+  //resize text box area automatically: sourced from https://www.techiedelight.com/automatically-resize-textarea-height-javascript/
+  $("#tweet-text").on('keyup keypress', function() {
+    $(this).height(0);
+    $(this).height(this.scrollHeight);
+  });
   
 });
 
