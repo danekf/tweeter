@@ -54,17 +54,21 @@ $(document).ready(() => {
     //finish article
     tweetArticle += '</article>';
     return tweetArticle;
-  };
-  
+  };  
+
+  //resize text box area automatically: sourced from https://www.techiedelight.com/automatically-resize-textarea-height-javascript/
+  $("#tweet-text").on('keyup keypress', function() {
+    $(this).height(0);
+    $(this).height(this.scrollHeight);
+  });
+
   //posts formated tweet from data
   const $renderTweets = function(tweetObjectsArr) {
     //take in array of tweet objects
     for (let tweet of tweetObjectsArr) {
       //for each object, append each tweet to the tweet-area
       $(".tweet-area").prepend($createTweetElement(tweet));
-    }
-
-
+    };
   };
   
   //submit new tweet to data when client hits submit
@@ -74,15 +78,24 @@ $(document).ready(() => {
       
       //get tweet text sanitize it with .text, and serialize it
       let $tweetText = $("#tweet-text").serialize();
+      $("#alert").slideUp(250);
 
      
-      //if no data is input send do not send, will complete at later date with better warning
+      //Data validation
       if ($tweetText.length < 6) {
-        alert("Please input text before submitting!");
+        let alert ='<span><i class="fa-solid fa-circle-radiation"></i>  Please input some text before submitting tweet <i class="fa-solid fa-circle-radiation"></i><span>';
+        $("#alert").html(alert);
+        $("#alert").slideDown(500);
+
       } else if($tweetText.length > 146){
-        alert("Please limit post to 140 characters.")
+        let alert ='<span><i class="fa-solid fa-circle-radiation"></i>  Please limit characters to 140 before submitting tweet <i class="fa-solid fa-circle-radiation"></i></span>';
+
+        $("#alert").html(alert);
+        $("#alert").slideDown(500);
+
 
       } else {
+        $("#alert").html("");
         $.ajax({
           type: "POST",
           url: "/tweets",
@@ -97,28 +110,21 @@ $(document).ready(() => {
       }
       
     });
+    //call to render tweets when page is done loading
+    const loadTweets = () => {
   
-  //call to render tweets when page is done loading
-  const loadTweets = () => {
-
-    $.ajax("./tweets", {
-      method: 'GET',
-      dataType: "json"
-    })
-    .then(function (response){
-      $(".tweet-area").empty();
-      $renderTweets(response);
-    });
-  };
-
-      //load all current tweets at time of page load
-    loadTweets();
-
-  //resize text box area automatically: sourced from https://www.techiedelight.com/automatically-resize-textarea-height-javascript/
-  $("#tweet-text").on('keyup keypress', function() {
-    $(this).height(0);
-    $(this).height(this.scrollHeight);
-  });
+      $.ajax("./tweets", {
+        method: 'GET',
+        dataType: "json"
+      })
+      .then(function (response){
+        $(".tweet-area").empty();
+        $renderTweets(response);
+      });
   
+    }
+    //load all current tweets at time of page load
+      loadTweets();
+    
 });
 

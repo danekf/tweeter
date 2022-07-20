@@ -9,6 +9,22 @@
   flex-direction: column;
   justify-content: center;  
 }
+#alert{
+  display: flex;
+  justify-content:center;
+}
+#alert > span{
+  width:fit-content;
+  margin-top: 15px;
+
+  height: 1.5em;
+  border-style:solid;
+  border-radius: 10px;
+  border-color: red;
+
+  color: rgb(255, 0, 0);
+}
+
 #tweet-text{
   resize: none;
   width: 90vw;
