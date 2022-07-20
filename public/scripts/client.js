@@ -24,7 +24,7 @@ $(document).ready(() => {
     
     //add body/div data (text)
     tweetArticle += `<div>
-    ${tweetData.content.text};
+    ${tweetData.content.text}
     </div>
     `;
     
@@ -54,15 +54,15 @@ $(document).ready(() => {
     //take in array of tweet objects
     for (let tweet of tweetObjectsArr) {
       //for each object, append each tweet to the tweet-area
-      $(".tweet-area").append($createTweetElement(tweet));
+      $(".tweet-area").prepend($createTweetElement(tweet));
     }
 
 
   };
   
   //submit new tweet to data when client hits submit
-  $('.new-tweet').submit(
-    (postTweet) => {
+  $('.create-tweet').submit(
+    (event) => {
       event.preventDefault(); //do not submit form as usual
       
       //get tweet text and serialize it
@@ -79,7 +79,7 @@ $(document).ready(() => {
           type: "POST",
           url: "/tweets",
           data: $tweetText,
-          success: loadTweets()
+          success: loadTweets          
         });
 
         //clear tweet text input field
@@ -87,17 +87,18 @@ $(document).ready(() => {
         //reset counter to 140 left
         $('.new-tweet').find('output[name="counter"]').val(140);
       }
-
       
     });
   
   //call to render tweets when page is done loading
   const loadTweets = () => {
+
     $.ajax("./tweets", {
       method: 'GET',
       dataType: "json"
     })
     .then(function (response){
+      $(".tweet-area").empty();
       $renderTweets(response);
     });
   };
