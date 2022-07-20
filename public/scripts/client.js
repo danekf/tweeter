@@ -6,8 +6,19 @@
 
 $(document).ready(() => {
   
+  //escape function for special characters
+  const escape = function (string) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(string));
+    return div.innerHTML;
+  }
+  
   //formats tweet from data
   const $createTweetElement = (tweetData) =>{
+
+    let text = tweetData.content.text;
+
+    let handle = tweetData.user.handle;
    
     //open article
     let tweetArticle = '<article class = "tweet">';
@@ -17,16 +28,14 @@ $(document).ready(() => {
     <li>
     <img src= ${tweetData.user.avatars}/>
     </li>
-    <li>${tweetData.user.handle}</li>
+    <li>${escape(handle)}</li>
     </ul>
     </header>
     `;
     
     //add body/div data (text)
-    tweetArticle += `<div>
-    ${tweetData.content.text}
-    </div>
-    `;
+    tweetArticle += `<div>${escape(text)}</div>`;
+
     
     //add footer data (date and icons)
     tweetArticle += `<footer>
@@ -65,8 +74,9 @@ $(document).ready(() => {
     (event) => {
       event.preventDefault(); //do not submit form as usual
       
-      //get tweet text and serialize it
+      //get tweet text sanitize it with .text, and serialize it
       let $tweetText = $("#tweet-text").serialize();
+
      
       //if no data is input send do not send, will complete at later date with better warning
       if ($tweetText.length < 6) {
