@@ -19,21 +19,15 @@ $("#tweet-text").on('input', function () {
   } else{
     $(counter).removeClass("negative");
     $(counter).addClass("counter");
+    
 
   };
+
   $(counter).text(length);
 
 
 
-
-
-
-
-
-
 });
-
-
 
 });
 

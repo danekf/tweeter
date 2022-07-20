@@ -41,7 +41,7 @@
 }
 
 /*Posted Tweets Stylings*/
-article {
+.tweet {
   margin-top: 1em;
   padding: 3px;
   display: flex;
@@ -53,14 +53,14 @@ article {
   
 }
 
-article > header {
+.tweet > header {
   padding-top: 10px;
   padding-bottom: 15px;
   
   
 }
 
-header > ul {
+.tweet > header > ul {
   display: flex;
   list-style-type: none;
   padding: 0;
@@ -72,18 +72,18 @@ header > ul {
 }
 
 
-article > div{
+.tweet > div{
   padding-bottom: 15px;
   border: 0;
   border-bottom: rgb(105, 105, 105);
   border-bottom-style: groove;
 }
 
-article:hover{
+.tweet:hover{
   box-shadow: 5px 5px rgb(105, 105, 105);
 }
 
-article > footer{
+.tweet > footer{
 
   padding-top: 10px;
   padding-bottom: 10px;
@@ -91,7 +91,7 @@ article > footer{
 
 }
 
-footer > ul {
+.tweet > footer > ul {
 
   display: flex;
   list-style-type: none;
@@ -106,6 +106,6 @@ footer > ul {
   color:#4056A1;
 }
 .icons:hover{
-  color: yellow;
+  color: rgb(255, 196, 0);
 }
 
