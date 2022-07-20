@@ -29,7 +29,7 @@ const tweetData = [
 ]
 
 $(document).ready(() => {
-
+  //formats tweet from data
   const $createTweetElement = (tweetData) =>{
     //convert date timestamp
     let tweetDate = new Date(tweetData.created_at);
@@ -79,8 +79,8 @@ $(document).ready(() => {
     return tweetArticle;
   }
   
-
-  const renderTweets = function (tweetObjectsArr) {
+  //posts formated tweet from data
+  const $renderTweets = function (tweetObjectsArr) {
     //take in array of tweet objects
     for (let tweet of tweetObjectsArr){
       //for each object, append each tweet to the tweet-area
@@ -89,9 +89,39 @@ $(document).ready(() => {
 
 
   }
+  
+  //submit new tweet to data when client hits submit
+  $('.new-tweet').submit(
+    (postTweet) => {
+      event.preventDefault(); //do not submit form as usual
+      
+      //get tweet text and serialize it
+      let $tweetText = $("#tweet-text").serialize();
+     
+      //if no data is input send do not send, will complete at later date with better warning
+      if ($tweetText.length < 6){
+        alert("Please input text before submitting!");
+      }
+      else{
+        $.ajax({
+          type: "POST",
+          url: "/tweets",
+          data: $tweetText,
+        })   
 
-  renderTweets(tweetData);
+      }
 
+
+
+      //clear tweet text input field
+      $("#tweet-text").val(""); 
+      //reset counter to 140 left
+      $('.new-tweet').find('output[name="counter"]').val(140);     
+      
+    });
+    
+  //call to render tweets when page is done loading
+  $renderTweets(tweetData);
   
 });
 

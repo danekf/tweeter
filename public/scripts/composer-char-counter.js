@@ -4,7 +4,6 @@ $(document).ready(() => {
 $("#tweet-text").on('input', function () {
 
   let text = $(this).val();
-  console.log(text);
   length = 140-text.length; 
 
   //target the counter element inside the new-tweet parent
