@@ -71,6 +71,9 @@ $(document).ready(() => {
       //if no data is input send do not send, will complete at later date with better warning
       if ($tweetText.length < 6) {
         alert("Please input text before submitting!");
+      } else if($tweetText.length > 146){
+        alert("Please limit post to 140 characters.")
+
       } else {
         $.ajax({
           type: "POST",
@@ -79,12 +82,12 @@ $(document).ready(() => {
           success: loadTweets()
         });
 
+        //clear tweet text input field
+        $("#tweet-text").val("");
+        //reset counter to 140 left
+        $('.new-tweet').find('output[name="counter"]').val(140);
       }
 
-      //clear tweet text input field
-      $("#tweet-text").val("");
-      //reset counter to 140 left
-      $('.new-tweet').find('output[name="counter"]').val(140);
       
     });
   
