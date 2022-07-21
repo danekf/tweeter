@@ -119,49 +119,7 @@
     flex-direction: column;
     justify-content: center;
   }
-  /*For writing a new tweet*/
-  #tweet-text{
-    resize: none;
-    width: 90vw;
-    height: 1.5em;
-    border: 0;
-    border-bottom: rgb(105, 105, 105);
-    border-bottom-style: groove;
-    outline: none;  
-  }
-  
-  /* Submit area */
-  .submission-area{
-    display: flex;
-    justify-content:space-between;   
-  }
-  
-  .submit-button {
-    font-family: 'Bungee';
-    background-color: #4056A1; 
-    color: whitesmoke;
-    border: 0;
-  }
-  
-  .counter {
-    font-family: 'Bungee'; 
-  }
-  
-  .negative {
-    font-family: 'Bungee'; 
-    color: rgb(255, 0, 0);
-  }
-  
-  /*Posted Tweets Stylings*/
-  .container{ 
-    width: 60vw;
-    display: flex;
-    margin: 2.5vh;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 2.5vh;   
-  
-  }
+
   /*For writing a new tweet*/
   #tweet-text{
     resize: none;
