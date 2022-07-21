@@ -1,45 +1,124 @@
-.navbar {
-  color: #FFFFFF;
-  display: flex;
-  background-color: #4056A1;
-  height: 120px;
-  justify-content:space-between;
 
-  /*fix navbar to top*/
-  position:fixed ;
-  width: 100%;    
+/* profile area changes depending on screen size */
+@media only screen and (min-width: 320px) and (max-width: 420px){
+  .navbar {
+    color: #FFFFFF;
+    display: flex;
+    background-color: #4056A1;
+    height: 120px;
+    justify-content:space-between;
+  
+    position:fixed ;
+    width: 100%;  
+  }
+  
+  .navbar > span {
+    margin: 1.5em;
+    font-family: 'Bungee';
+  }
+  
+  .navbar > div {
+    margin-top: 2em;
+    margin-right: 1em; 
+  }
 
+  .profile {
+
+    background-image: url("../images/profile_background.png");
+    opacity: 1;
+  
+  
+    font-family:'Source Sans Pro', sans-serif;
+    background-color: #CA9C67;
+    height: 420;
+  
+  }
+  .profile > div {
+    display: flex;
+    justify-content: center;
+  
+  }
+}
+/*Tablet Layout*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .navbar {
+    color: #FFFFFF;
+    display: flex;
+    background-color: #4056A1;
+    height: 120px;
+    justify-content:space-between;
+  
+    position:fixed ;
+    width: 100%;  
+  }
+  
+  .navbar > span {
+    margin: 1.5em;
+    font-family: 'Bungee';
+  }
+  
+  .navbar > div {
+    margin-top: 2em;
+    margin-right: 1em; 
+  }
+
+  .profile {
+    padding-top: 140px;
+    background-image: url("../images/profile_background.png");
+    opacity: 1;
+  
+  
+    font-family:'Source Sans Pro', sans-serif;
+    background-color: #CA9C67;
+    height: 540px;
+  
+  }
+  .profile > div {
+    display: flex;
+    justify-content: center;
+  
+  }
 }
 
-.navbar > span {
-  margin: 1.5em;
-  font-family: 'Bungee';
-}
+/*Desktop Layout*/
+@media only screen and (min-width: 1024px) {
+  .navbar {
+    color: #FFFFFF;
+    display: flex;
+    background-color: #4056A1;
+    height: 120px;
+    justify-content:space-between;
+  
+    position:fixed ;
+    width: 100%;  
+  }
+  
+  .navbar > span {
+    margin: 1.5em;
+    font-family: 'Bungee';
+  }
+  
+  .navbar > div {
+    margin-top: 2em;
+    margin-right: 1em; 
+  }
 
-.navbar > div {
-  margin-top: 2em;
-  margin-right: 1em; 
-}
+  .profile {
+    padding-top: 140px;
+    background-image: url("../images/profile_background.png");
+    opacity: 1;
+  
+  
+    font-family:'Source Sans Pro', sans-serif;
+    background-color: #CA9C67;
+    height: 540px;
+  
+  }
+  .profile > div {
+    display: flex;
+    justify-content: center;
+  
+  }
+}  
 
-.arrows {
-  display: flex;
-  justify-content: center;
-  color: red
-}
 
-.profile {
-  padding-top: 140px;
-  background-image: url("../images/profile_background.png");
-  opacity: 1;
-
-
-  font-family:'Source Sans Pro', sans-serif;
-  background-color: #CA9C67;
-  height: 540px;
-
-}
-.profile > div {
-  display: flex;
-  justify-content: center;
-
-}

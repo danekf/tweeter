@@ -103,9 +103,8 @@ $(document).ready(() => {
           success: loadTweets          
         });
 
-        //clear tweet text input field
-        $("#tweet-text").val("");
-        //reset counter to 140 left
+        //clear tweet text input field && reset counter to 140 left
+        $("#tweet-text").val("");        
         $('.new-tweet').find('output[name="counter"]').val(140);
       }
       

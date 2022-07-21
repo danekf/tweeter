@@ -1,0 +1,33 @@
+/*Stylings that do not change based on screen size*/
+.arrows {
+  display: flex;
+  justify-content: center;
+  color: red
+}
+
+#alert{
+  display: flex;
+  justify-content:center;
+}
+
+#alert > span{
+  width:fit-content;
+  margin-top: 15px;
+  height: 1.5em;
+  border-style:solid;
+  border-radius: 10px;
+  border-color: red;
+  color: rgb(255, 0, 0);
+}
+
+.icons{
+  color:#4056A1;
+}
+.icons:hover{
+  color: rgb(255, 196, 0);
+}
+
+.ghost{
+  padding-top: 140px;
+}
+
