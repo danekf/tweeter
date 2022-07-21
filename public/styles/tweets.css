@@ -1,110 +1,108 @@
 
 /* profile area changes depending on screen size */
 /* Create Tweet Stylings */
-@media only screen and (min-width: 320px) and (max-width: 420px){
-.container{ 
-
-  margin-left: 5vw;
-  margin-right: 5vw;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;  
-}
-
-#tweet-text{
-  resize: none;
-  width: 90vw;
-  height: 1.5em;
-  border: 0;
-  border-bottom: rgb(105, 105, 105);
-  border-bottom-style: groove;
-  outline: none;  
-}
-
-/* Submit area */
-.submission-area{
-  display: flex;
-  justify-content:space-between;   
-}
-
-.submit-button {
-  font-family: 'Bungee';
-  background-color: #4056A1; 
-  color: whitesmoke;
-  border: 0;
-}
-
-.counter {
-  font-family: 'Bungee'; 
-}
-
-.negative {
-  font-family: 'Bungee'; 
-  color: rgb(255, 0, 0);
-}
-
-/*Posted Tweets Stylings*/
-.tweet {
-  margin-top: 1em;
-  padding: 3px;
-  display: flex;
-  flex-direction: column;
+@media only screen and (min-width: 320px) and (max-width: 768px){
   
-  border: 0;
-  border: rgb(105, 105, 105);
-  border-style: groove;
+  .container{ 
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+  }
   
-}
-.tweet > header {
-  padding-top: 10px;
-  padding-bottom: 15px;   
-}
-
-.tweet > header > ul {
-  display: flex;
-  list-style-type: none;
-  padding: 0;
-  padding-top: 5px;
-  padding-right: 10px;
-  margin: 0;
-
-  justify-content: space-between;
-}
-
-
-.tweet > div{
-  padding-bottom: 15px;
-  border: 0;
-  border-bottom: rgb(105, 105, 105);
-  border-bottom-style: groove;
-}
-
-.tweet:hover{
-  box-shadow: 5px 5px rgb(105, 105, 105);
-}
-
-.tweet > footer{
-
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-size:smaller;
-
-}
-
-.tweet > footer > ul {
-
-  display: flex;
-  list-style-type: none;
-  padding: 0;
-  padding-right: 10px;
-  margin: 0;
-
-  justify-content: end;
-}
-
-
+  #tweet-text{
+    resize: none;
+    width: 90vw;
+    height: 1.5em;
+    border: 0;
+    border-bottom: rgb(105, 105, 105);
+    border-bottom-style: groove;
+    outline: none;  
+  }
+  
+  /* Submit area */
+  .submission-area{
+    display: flex;
+    justify-content:space-between;   
+  }
+  
+  .submit-button {
+    font-family: 'Bungee';
+    background-color: #4056A1; 
+    color: whitesmoke;
+    border: 0;
+  }
+  
+  .counter {
+    font-family: 'Bungee'; 
+  }
+  
+  .negative {
+    font-family: 'Bungee'; 
+    color: rgb(255, 0, 0);
+  }
+  
+  /*Posted Tweets Stylings*/
+  .tweet {
+    margin-top: 1em;
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    
+    border: 0;
+    border: rgb(105, 105, 105);
+    border-style: groove;
+    
+  }
+  .tweet > header {
+    padding-top: 10px;
+    padding-bottom: 15px;   
+  }
+  
+  .tweet > header > ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    padding-top: 5px;
+    padding-right: 10px;
+    margin: 0;
+  
+    justify-content: space-between;
+  }
+  
+  
+  .tweet > div{
+    padding-bottom: 15px;
+    border: 0;
+    border-bottom: rgb(105, 105, 105);
+    border-bottom-style: groove;
+  }
+  
+  .tweet:hover{
+    box-shadow: 5px 5px rgb(105, 105, 105);
+  }
+  
+  .tweet > footer{
+  
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size:smaller;
+  
+  }
+  
+  .tweet > footer > ul {
+  
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    padding-right: 10px;
+    margin: 0;
+  
+    justify-content: end;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -213,7 +211,7 @@
 
 @media only screen and (min-width: 1024px){
   .container{ 
-
+    float :left;
     margin-left: 5vw;
     margin-right: 5vw;
     margin-top: 5px;
@@ -221,6 +219,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;  
+
   }
   
   #tweet-text{
