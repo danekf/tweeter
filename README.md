@@ -22,3 +22,25 @@ Safeguards against cross site scripting have been implemented.
 - Body-Parser
 - Chance
 - #DEV : Nodemon (automatic server restart on save)
+
+## Additional resources used
+- Font Awesome 
+- Automatic resizing of text area: sourced from https://www.techiedelight.com/automatically-resize-textarea-height-javascript/
+
+## Future features to be implemented
+- More fully featured desktop client view 
+- SASS to replace CSS
+- "Return to top" button when user has scrolled down.
+
+## Additional goals
+- User log in-out
+- Multiple Users
+- Links to retweet, like, or flag.
+- More featured user profile page. (About me, friends, etc...)
+
+## Screenshots
+
+!["Example mobile view](https://github.com/danekf/tweeter/blob/master/screenshots/Tweeter-mobile.png)
+!["Example tablet view](https://github.com/danekf/tweeter/blob/master/screenshots/Tweeter-Tablet.png)
+!["Example desktop view](https://github.com/danekf/tweeter/blob/master/screenshots/Tweeter-Desktop.png)
+!["Example user input error](https://github.com/danekf/tweeter/blob/master/screenshots/tweet-exceeds-limt.png)
