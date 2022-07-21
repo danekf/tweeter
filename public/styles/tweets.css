@@ -46,6 +46,10 @@
   }
   
   /*Posted Tweets Stylings*/
+  .tweet-area{
+    width: 90vw;
+  }
+
   .tweet {
     margin-top: 1em;
     padding: 3px;
@@ -107,16 +111,15 @@
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .container{ 
-
+    width: 60vw;
     margin-left: 5vw;
     margin-right: 5vw;
-    margin-top: 5px;
     margin-bottom: 5px;
     display: flex;
     flex-direction: column;
-    justify-content: center;  
+    justify-content: center;
   }
-  
+  /*For writing a new tweet*/
   #tweet-text{
     resize: none;
     width: 90vw;
@@ -150,7 +153,55 @@
   }
   
   /*Posted Tweets Stylings*/
+  .container{ 
+    width: 60vw;
+    display: flex;
+    margin: 2.5vh;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 2.5vh;   
+  
+  }
+  /*For writing a new tweet*/
+  #tweet-text{
+    resize: none;
+    height: 1.5em;
+    width: 60vw;
+    border: 0;
+    border-bottom: rgb(105, 105, 105);
+    border-bottom-style: groove;
+    outline: none;  
+  }
+  
+  /* Submit area */
+  .submission-area{
+    display: flex;
+    justify-content:space-between;   
+  }
+  
+  .submit-button {
+    font-family: 'Bungee';
+    background-color: #4056A1; 
+    color: whitesmoke;
+    border: 0;
+  }
+  
+  .counter {
+    font-family: 'Bungee'; 
+  }
+  
+  .negative {
+    font-family: 'Bungee'; 
+    color: rgb(255, 0, 0);
+  }
+  
+  /*Posted Tweets Stylings*/
+  .tweet-area{
+    width: 61vw;
+  }
   .tweet {
+    width: 61vw;
+    margin-right: 2.5vw;
     margin-top: 1em;
     padding: 3px;
     display: flex;
@@ -211,21 +262,17 @@
 
 @media only screen and (min-width: 1024px){
   .container{ 
-    float :left;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    width: 61vw;
     display: flex;
+    margin: 2.5vh;
     flex-direction: column;
-    justify-content: center;  
-
+    justify-content: center;
   }
-  
+  /*For writing a new tweet*/
   #tweet-text{
     resize: none;
-    width: 90vw;
     height: 1.5em;
+    width: 61vw;
     border: 0;
     border-bottom: rgb(105, 105, 105);
     border-bottom-style: groove;
@@ -255,7 +302,12 @@
   }
   
   /*Posted Tweets Stylings*/
+  .tweet-area{
+    width: 61vw;
+  }
   .tweet {
+    width: 61vw;
+    margin-right: 2.5vw;
     margin-top: 1em;
     padding: 3px;
     display: flex;

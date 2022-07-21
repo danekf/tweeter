@@ -4,7 +4,9 @@
 .navbar {
     color: #FFFFFF;
     display: flex;
-    background-color: #4056A1;
+    background-image: url("../images/profile_background.png");
+    background-color: #CA9C67;
+    opacity: 1;  
     height: 120px;
     justify-content:space-between;
   
@@ -24,17 +26,24 @@
 
   .profile {
     background-image: url("../images/profile_background.png");
+    background-color: #CA9C67;
     opacity: 1;  
     font-family:'Source Sans Pro', sans-serif;
-    background-color: #CA9C67;
     height: 420px;
   
   }
+  
   .profile > div {
     display: flex;
     justify-content: center;
-  
-  }
+    flex-direction: column;
+    align-items: center;
+    }
+
+  .profile > div > img{
+    height: 40%;
+      width: 40%;
+  }    
 }
 
 /*Tablet Layout*/
@@ -44,10 +53,9 @@
     display: flex;
     background-color: #4056A1;
     height: 120px;
-    justify-content:space-between;
-  
+    justify-content:space-between;  
     position:fixed ;
-    width: 100%;  
+    width: 100vw;  
   }
   
   .navbar > span {
@@ -65,15 +73,25 @@
     opacity: 1;  
     font-family:'Source Sans Pro', sans-serif;
     background-color: #CA9C67;
-    height: 420px;
+    height: 33vw;
+    width: 33vw;
+    padding-top: 2.5vh;
 
+    margin: 2.5vh;
     float: left;
   
   }
+  
   .profile > div {
     display: flex;
     justify-content: center;
-  
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile > div > img{
+    height: 50%;
+    width: 50%;
   }
 }
 
@@ -84,10 +102,9 @@
     display: flex;
     background-color: #4056A1;
     height: 120px;
-    justify-content:space-between;
-  
+    justify-content:space-between;  
     position:fixed ;
-    width: 100%;  
+    width: 100vw;  
   }
   
   .navbar > span {
@@ -102,19 +119,31 @@
 
   .profile {
     background-image: url("../images/profile_background.png");
-    opacity: 1;
-  
-  
+    opacity: 1;  
     font-family:'Source Sans Pro', sans-serif;
     background-color: #CA9C67;
-    height: 420px;
+    height: 33vw;
+    width: 33vw;
+    padding-top: 2.5vh;
+
+    margin: 2.5vh;
+    float: left;
   
   }
+  
   .profile > div {
     display: flex;
     justify-content: center;
-  
+    flex-direction: column;
+    align-items: center;
   }
-}  
+
+  .profile > div > img{
+    height: 50%;
+    width: 50%;
+  }
+}
+
+
 
 
